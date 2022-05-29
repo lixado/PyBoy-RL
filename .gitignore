@@ -1,3 +1,8 @@
+*.ram
+games/Kirby_Dream_Land.gb
+games/Super_Mario_Land.gb
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
