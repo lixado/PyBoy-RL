@@ -15,8 +15,9 @@ Training time:
 - Kirby's Dream Land Bossfight: 12 hours on CUDA GPU
 
 <p align="center">
-<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyPlatformReward.jpg" width="350">
-<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyBossRewardPlot.jpg" width="350">
+<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyPlatformReward.jpg" width="320">
+<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyBossRewardPlot.jpg" width="320">
+<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/marioreward.jpg" width="320">
 </p>
 
 # Requirements
