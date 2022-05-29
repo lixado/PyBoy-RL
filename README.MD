@@ -15,9 +15,9 @@ Report: [report](https://github.com/lixado/PyBoy-RL/raw/main/README/report.pdf)
 </p>
 
 If you want to train yourself, below is expected training time for the plots above:
-Super Mario Land: 26 hours on a 4-core CPU 
-Kirby's Dream Land: 20 hours on CUDA GPU
-Kirby's Dream Land Bossfight: 12 hours on CUDA GPU
+- Super Mario Land: 26 hours on a 4-core CPU 
+- Kirby's Dream Land: 20 hours on CUDA GPU
+- Kirby's Dream Land Bossfight: 12 hours on CUDA GPU
 
 # Requirements
 - Python3.7 on Windows
