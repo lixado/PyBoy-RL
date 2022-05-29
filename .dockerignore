@@ -1,9 +1,4 @@
-!checkpoints/Super_Mario_Land/default
-!checkpoints/Kirby_Dream_Land/default-boss-model
-!checkpoints/Kirby_Dream_Land/default-platformer-model
-
 **/__pycache__
 notes.txt
-checkpoints
 *.ram
 .gitignore
