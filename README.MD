@@ -15,4 +15,5 @@ Once inside the image run __`python3 main.py`__ to start the program.
 
 # Based on
 DDQN - https://arxiv.org/abs/1509.06461
+
 PyTorch RL Super Mario Bros Example - https://pytorch.org/tutorials/intermediate/mario_rl_tutorial.html
