@@ -113,7 +113,7 @@ bossAiPlayer = AIPlayer((frameStack,) + gameDimentions, len(filteredActions), sa
 
 if mode < 2:  # evaluate
 	# load model
-	folderList = [name for name in os.listdir(checkpoint_dir) if len(os.listdir(checkpoint_dir / name)) != 0]
+	folderList = [name for name in os.listdir(checkpoint_dir) if os.path.isdir(checkpoint_dir / name) and len(os.listdir(checkpoint_dir / name)) != 0]
 
 	if len(folderList) == 0:
 		print("No models to load in path: ", save_dir)
