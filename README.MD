@@ -43,7 +43,7 @@ Then, run:
 # Docker
 Build command: __`docker build --tag pyboy-rl .`__ 
 
-Once inside the image run __`python3 main.py`__ to start the program.
+Once inside the image run __`python3 main.py`__ to start the program. The docker container only supports headless mode, and the game emulator ui will not show up.
 
 # Based on
 DDQN - https://arxiv.org/abs/1509.06461
