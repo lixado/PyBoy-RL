@@ -30,7 +30,8 @@ Training time:
     - macOS: __`brew install sdl2`__
     - Windows: PyBoy guide https://github.com/Baekalfen/PyBoy/wiki/Installation#windows-10-64-bit Download link https://www.libsdl.org/download-2.0.php
 - For package requirements see requirements.txt
-- GameBoy ROM files for Super Mario Land or Kirby's Dream Land (place these in /games)
+- GameBoy ROM files for Super Mario Land or Kirby's Dream Land (place these in /games) 
+  - Filename must be "Kirby_Dream_Land" and "Super_Mario_Land" respectively
 
 # Docker
 Build command: __`docker build --tag pyboy-rl .`__ 
