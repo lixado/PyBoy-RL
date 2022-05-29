@@ -1,0 +1,9 @@
+PySDL2==0.9.11
+pyboy==1.4.7
+gym==0.21.0
+matplotlib==3.5.1
+scikit-image==0.19.2
+opencv-python==4.5.5.64
+numpy==1.21.5
+torch==1.11.0
+torchvision==0.12.0

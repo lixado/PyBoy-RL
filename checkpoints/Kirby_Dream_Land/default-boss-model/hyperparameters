@@ -1,0 +1,23 @@
+self.exploration_rate = 1 # explore 100% of times, this value is changed in the act function
+self.exploration_rate_decay = 0.99999975 #0.99999975
+self.lr_decay = 0.9999985
+self.exploration_rate_min = 0.01
+self.curr_step = 0
+
+"""
+   Memory
+"""
+self.memory = deque(maxlen=500000)
+self.batch_size = 64
+self.save_every = 2e5  # no. of experiences between saving Mario Net
+
+"""
+   Q learning
+"""
+self.gamma = 0.8
+self.optimizer = torch.optim.Adam(self.net.parameters(), lr=0.0002)
+self.scheduler = torch.optim.lr_scheduler.ExponentialLR(self.optimizer, gamma=self.lr_decay)
+self.loss_fn = torch.nn.SmoothL1Loss()
+self.burnin = 1000  # min. experiences before training
+self.learn_every = 3  # no. of experiences between updates to Q_online
+self.sync_every = 100  # no. of experiences between Q_target & Q_online sync
