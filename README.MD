@@ -33,6 +33,13 @@ Training time:
 - GameBoy ROM files for Super Mario Land or Kirby's Dream Land (place these in /games) 
   - Filename must be "Kirby_Dream_Land" and "Super_Mario_Land" respectively
 
+# Run with Python
+To run from source, first install dependencies:
+- __`pip3 install -r requirements.txt`__
+
+Then, run:
+- __`python3 main.py`__
+
 # Docker
 Build command: __`docker build --tag pyboy-rl .`__ 
 
