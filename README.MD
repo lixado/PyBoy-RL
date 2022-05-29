@@ -1,12 +1,12 @@
 # Introduction
 
 
-Report: 
+Report: [report](https://github.com/lixado/PyBoy-RL/raw/main/README/report.pdf)
 
 
 <p align="center">
 <img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirby.gif" width="320">
-<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirby.gif" width="320">
+<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/mario.gif" width="320">
 </p>
 
 
