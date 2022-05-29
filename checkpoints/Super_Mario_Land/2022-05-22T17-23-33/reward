@@ -1,5 +1,0 @@
-# reward function simple
-clock = current_mario.time_left - prevGameState.time_left
-movement = current_mario.real_x_pos - prevGameState.real_x_pos
-death = current_mario.lives_left - prevGameState.lives_left
-reward = clock + movement + death

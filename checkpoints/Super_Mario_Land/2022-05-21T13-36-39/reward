@@ -1,6 +1,0 @@
-# normalized reward function based on https://www.youtube.com/watch?v=0R3PnJEisqk
-timePunishement = ((current_mario.time_left / 400) ** 0.5)  # at 400 punishement = 0  when > 400 punishment becomes more negative
-progressReward = 1 - ((3000 - current_mario.real_x_pos) / 3000) ** 0.5
-levelReward = max((current_mario.world[0] - prevGameState.world[0]), (current_mario.world[1] - prevGameState.world[1]))  # +1 if either new level or new world
-dyingPunishement = (current_mario.lives_left - prevGameState.lives_left) # -1 is max
-reward = progressReward*timePunishement + dyingPunishement + levelReward
