@@ -6,11 +6,15 @@
     - Fedora: __`sudo dnf install SDL2-devel`__
     - macOS: __`brew install sdl2`__
     - Windows: PyBoy guide https://github.com/Baekalfen/PyBoy/wiki/Installation#windows-10-64-bit Download link https://www.libsdl.org/download-2.0.php
-    
-## Dependencies
-See requirements.txt
+- For package requirements see requirements.txt
+- ROM files for Super Mario Land or Kirby's Dream Land (place these in /games)
 
 # Docker
 Build command: __`docker build --tag pyboy-rl .`__ 
 
 Once inside the image run __`python3 main.py`__ to start the program.
+
+# Based on
+DDQN - https://arxiv.org/abs/1509.06461
+
+PyTorch RL Super Mario Bros Example - https://pytorch.org/tutorials/intermediate/mario_rl_tutorial.html
