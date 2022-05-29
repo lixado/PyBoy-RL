@@ -10,8 +10,8 @@ Report: [report](https://github.com/lixado/PyBoy-RL/raw/main/README/report.pdf)
 </p>
 
 <p align="center">
-<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyPlatformerReward.jpg" width="320">
-<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyBossRewardPlot.jpg" width="320">
+<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyPlatformReward.jpg" width="350">
+<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyBossRewardPlot.jpg" width="350">
 </p>
 
 If you want to train yourself, below is expected training time for the plots above:
