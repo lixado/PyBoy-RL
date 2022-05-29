@@ -9,6 +9,10 @@ Report: [report](https://github.com/lixado/PyBoy-RL/raw/main/README/report.pdf)
 <img src="https://github.com/lixado/PyBoy-RL/raw/main/README/mario.gif" width="320">
 </p>
 
+<p align="center">
+<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyPlatformerReward.jpg" width="320">
+<img src="https://github.com/lixado/PyBoy-RL/raw/main/README/kirbyBossRewardPlot.jpg" width="320">
+</p>
 
 If you want to train yourself, below is expected training time for the plots above:
 Super Mario Land: 26 hours on a 4-core CPU 
