@@ -23,6 +23,7 @@ Training time:
 # Requirements
 - Python3.7 on Windows
 - Python3+ on Linux
+- PyBoy (https://github.com/Baekalfen/PyBoy)
 - SDL2
     - Ubuntu: __`sudo apt install libsdl2-dev`__
     - Fedora: __`sudo dnf install SDL2-devel`__
