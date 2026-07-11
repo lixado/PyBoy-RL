@@ -1,15 +1,15 @@
 from asyncio import sleep
 import itertools
-from pyboy import WindowEvent
+from pyboy.utils import WindowEvent
 from AISettings.AISettingsInterface import AISettingsInterface, Config
 
 class GameState():
     def __init__(self, pyboy):
-        game_wrapper = pyboy.game_wrapper()
+        game_wrapper = pyboy.game_wrapper
         "Find the real level progress x"
-        level_block = pyboy.get_memory_value(0xC0AB)
+        level_block = pyboy.memory[0xC0AB]
         # C202 Mario's X position relative to the screen
-        mario_x = pyboy.get_memory_value(0xC202)
+        mario_x = pyboy.memory[0xC202]
         scx = pyboy.botsupport_manager().screen(
         ).tilemap_position_list()[16][0]
         real = (scx - 7) % 16 if (scx - 7) % 16 != 0 else 16
@@ -31,7 +31,7 @@ class MarioAI(AISettingsInterface):
 		previousMario = mario before step is taken
 		current_mario = mario after step is taken
 		"""
-		timeRespawn = pyboy.get_memory_value(0xFFA6) #Time until respawn from death (set when Mario has fell to the bottom of the screen) 
+		timeRespawn = pyboy.memory[0xFFA6] #Time until respawn from death (set when Mario has fell to the bottom of the screen) 
 		if(timeRespawn > 0): # if we cant move return 0 reward otherwise we could be punished for crossing a level
 			return 0
 
@@ -45,7 +45,7 @@ class MarioAI(AISettingsInterface):
 
 			current_mario = self.GetGameState(pyboy)
 
-			pyboy.game_wrapper()._level_progress_max = current_mario.real_x_pos
+			pyboy.game_wrapper._level_progress_max = current_mario.real_x_pos
 			current_mario._level_progress_max = current_mario.real_x_pos
 
 
@@ -95,13 +95,13 @@ class MarioAI(AISettingsInterface):
 
 	def PrintGameState(self, pyboy):
 		gameState = GameState(pyboy)
-		game_wrapper = pyboy.game_wrapper()
+		game_wrapper = pyboy.game_wrapper
 
 		print("'Fake', level_progress: ", game_wrapper.level_progress)
 		print("'Real', level_progress: ", gameState.real_x_pos)
 		print("_level_progress_max: ", gameState._level_progress_max)
 		print("World: ", gameState.world)
-		print("Time respawn", pyboy.get_memory_value(0xFFA6))
+		print("Time respawn", pyboy.memory[0xFFA6])
 
 	def GetGameState(self, pyboy):
 		return GameState(pyboy)
@@ -114,7 +114,7 @@ class MarioAI(AISettingsInterface):
 	def GetLength(self, pyboy):
 		result = sum([x[2] for x in self.realMax])
 
-		pyboy.game_wrapper()._level_progress_max = 0 # reset max level progress because game hasnt implemented it
+		pyboy.game_wrapper._level_progress_max = 0 # reset max level progress because game hasnt implemented it
 		self.realMax = []
 
 		return result

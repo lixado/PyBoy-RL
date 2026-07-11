@@ -1,17 +1,17 @@
 import itertools
-from pyboy import WindowEvent
+from pyboy.utils import WindowEvent
 from AISettings.AISettingsInterface import AISettingsInterface
 from AISettings.AISettingsInterface import Config
 
 
 class GameState:
     def __init__(self, pyboy):
-        game_wrapper = pyboy.game_wrapper()
-        self.boss_health = pyboy.get_memory_value(0xD093)
-        self.screen_x_position = pyboy.get_memory_value(0xD053)
-        self.kirby_x_position = pyboy.get_memory_value(0xD05C)
-        self.kirby_y_position = pyboy.get_memory_value(0xD05D)
-        self.game_state = pyboy.get_memory_value(0xD02C)
+        game_wrapper = pyboy.game_wrapper
+        self.boss_health = pyboy.memory[0xD093]
+        self.screen_x_position = pyboy.memory[0xD053]
+        self.kirby_x_position = pyboy.memory[0xD05C]
+        self.kirby_y_position = pyboy.memory[0xD05D]
+        self.game_state = pyboy.memory[0xD02C]
         scx = pyboy.botsupport_manager().screen().tilemap_position_list()[16][0]
         self.level_progress = self.screen_x_position * 16 + (scx - 7) % 16 + self.kirby_x_position
         self.health = game_wrapper.health

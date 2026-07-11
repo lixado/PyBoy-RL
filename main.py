@@ -81,18 +81,18 @@ checkpoint_dir = Path("checkpoints") / gameName
 """
   Load emulator
 """
-pyboy = PyBoy(game, window_type="headless" if quiet else "SDL2", window_scale=3, debug=False, game_wrapper=True)
+pyboy = PyBoy(game, window="headless" if quiet else "SDL2", scale=3, debug=False)
 
 """
   Load enviroment
 """
 aiSettings = AISettingsInterface()
-if pyboy.game_wrapper().cartridge_title == "SUPER MARIOLAN":
+if pyboy.game_wrapper.cartridge_title == "SUPER MARIOLAN":
 	aiSettings = MarioAI()
-if pyboy.game_wrapper().cartridge_title == "KIRBY DREAM LA":
+if pyboy.game_wrapper.cartridge_title == "KIRBY DREAM LA":
 	aiSettings = KirbyAI()
 
-env = CustomPyBoyGym(pyboy, observation_type=observation_type)
+env = CustomPyBoyGym(pyboy)
 env.setAISettings(aiSettings)  # use this settings
 filteredActions = aiSettings.GetActions()  # get possible actions
 print("Possible actions: ", [[WindowEvent(i).__str__() for i in x] for x in filteredActions])

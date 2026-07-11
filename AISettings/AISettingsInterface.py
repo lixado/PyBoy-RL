@@ -1,6 +1,7 @@
 from typing import Any, List
 from numpy import float64
-from pyboy import PyBoy, WindowEvent
+from pyboy import PyBoy
+from pyboy.utils import WindowEvent
 
 class GameState():
     def __init__(self, pyboy: PyBoy):
